@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_test"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="35dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center_horizontal"
+        android:text="@string/take_test" />
+
+    <Button
+        android:id="@+id/btn_num"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="35dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center_horizontal"
+        android:text="@string/emergency_numbers" />
+
+    <Button
+        android:id="@+id/btn_track"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="35dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center_horizontal"
+        android:text="RealTime Data" />
+
+
+
+
+</LinearLayout>

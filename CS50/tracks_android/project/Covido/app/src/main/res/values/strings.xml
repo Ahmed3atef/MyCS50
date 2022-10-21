@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Covido</string>
+    <string name="emergency_numbers">Emergency Numbers</string>
+    <string name="start">Start</string>
+    <string name="this_test_is_not_definitively_approved_it_only_shows_results_according_to_the_symptoms_that_you_were_exposed_to_remember_that_these_symptoms_may_appear_in_a_patient_with_a_cold_or_natural_flu">This test is not definitively approved, it only shows results according to the symptoms that you were exposed to, remember that these symptoms may appear in a patient with a cold or natural flu</string>
+    <string name="wellcom_to_covid_19_test">Wellcom to covid-19 Test</string>
+    <string name="todo">TODO</string>
+    <string name="call">Call</string>
+    <string name="protection_information">Protection information</string>
+    <string name="take_test">Take Test</string>
+    <string name="title_activity_track">Covid-19 Cases</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_country">Country</string>
+    <string name="ask1">In the last two weeks, have you worked or volunteered in a healthcare facility or as a first responder? Healthcare facilities include a hospital, other medical setting (including dental care setting), or long-term care facility.</string>
+    <string name="ask2">Do you have any of these life-threatening symptoms? Bluish lips or face Severe and constant pain or pressure in the chest Extreme difficulty breathing (such as gasping for air, being unable to talk without catching your breath, severe wheezing, nostrils flaring) New disorientation (acting confused) Unconscious or very difficult to wake up Slurred speech or difficulty speaking (new or worsening) New or worsening seizures Signs of low blood pressure (too weak to stand, dizziness, lightheaded, feeling cold, pale, clammy skin) Dehydration (dry lips and mouth, not urinating much, sunken eyes)</string>
+    <string name="ask3">Are you feeling sick? </string>
+    <string name="ask4">In the last two weeks, did you care for or have close contact (within 6 feet of an infected person for at least 15 minutes) with someone with symptoms of COVID-19, tested for COVID-19, or diagnosed with COVID-19?</string>
+    <string name="ask5">Do you have any of the following? (check any) Fever or feeling feverish (such as chills, sweating) Cough Mild or moderate difficulty breathing Sore throat Muscle aches or body aches Vomiting or diarrhea New loss of taste or smell Congestion or runny nose Other symptoms</string>
+    <string name="ask6">Do you live in a long-term care facility, nursing home, or homeless shelter?</string>
+    <string name="plsCall">Urgent medical attention may be needed. Please call your country Emergency Number or go to the Emergency Department. Based on your  symptoms, you may need urgent medical care. Tell the emergency staff if you have had contact with someone with COVID-19.</string>
+    <string name="SAH">Congratulations, you are not infected with Corona virus, but be careful and stay indoors</string>
+</resources>
