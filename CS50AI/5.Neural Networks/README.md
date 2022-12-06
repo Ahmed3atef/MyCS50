@@ -40,19 +40,7 @@ The two white units on the left are the input and the unit on the right is an ou
 
 For example, an Or logical connective can be represented as a function *f* with the following truth table:
 
-|
-
-*x*
-
- |
-
-*y*
-
- |
-
-*f(x, y)*
-
- |
+|*x*|*y*|*f(x, y)*|
 | --- | --- | --- |
 | 0 | 0 | 0 |
 | 0 | 1 | 1 |
