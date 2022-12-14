@@ -1,0 +1,98 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+        <h2 style="text-align:center;">{{product.title}}</h2>
+        </br>
+        {% if bidUpdate %}
+            {% if updated %}
+                <div class="alert alert-success" role="alert">
+                    <center>Success Updated The Bid</center>
+                </div>
+            {% else %}
+                <div class="alert alert-danger" role="alert">
+                    <center>Faild to Update The Bid</center>
+                </div>
+            {% endif %}
+        {% endif %}
+
+
+        {% if inWatchlist %}
+            <div>
+                <a href="{% url 'watchlistSwitch' id=product.id switch=0 %}" class="btn btn-secondary">add to watchlist</a>
+            </div>
+        {% else %}
+            <div>
+                <a href="{% url 'watchlistSwitch' id=product.id switch=1 %}" class="btn btn-danger">remove from watchlist</a>
+            </div>
+        {% endif %}
+        </br>
+        {% if user == product.user %}
+            <div class="mx-3">
+                <a href="{% url 'editListing' id=product.id %}" class="btn btn-warning">Edit</a>
+                <a href="{% url 'close' id=product.id %}" class="btn btn-danger">Close</a>
+            </div>
+        {% endif %}
+        </br>
+        {% if not product.is_Active and user == product.bid.user %}
+        <div class="alert alert-success" role="alert">
+            <center>Congratulations, You won tha Auction!</center>
+        </div>
+        {% endif %}
+        <div>
+            <center><img src="{{product.image_url}}" alt="{{product.title}}" width="500" height="500"></center>
+        </div>
+        <div>
+            <p>{{product.description}}</p>
+        </div>
+        <div>
+            <h2 style="text-align:center;">${{product.bid}}</h2>
+        </div>
+        {% if not product.is_Active %}
+        <form action="{% url 'addBids' id=product.id %}" method="post">
+            {% csrf_token %}
+            <div class="input-group-prepend">
+                <span class="input-group-text">Add Bids</span>
+                <span class="input-group-text">$</span>
+            </div>
+            <input type="number" min="0" onkeyup="if(value<0) value=0;" class="form-control " step="0.01" name="bid" disabled>
+            </br>
+            <button class="btn btn-primary" type="submit" disabled>Send</button>
+        </form>
+        {% else %}
+        <form action="{% url 'addBids' id=product.id %}" method="post">
+            {% csrf_token %}
+            <div class="input-group-prepend">
+                <span class="input-group-text">Add Bids</span>
+                <span class="input-group-text">$</span>
+            </div>
+            <input type="number" min="0" onkeyup="if(value<0) value=0;" class="form-control " step="0.01" name="bid" required>
+            </br>
+            <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+        {% endif %}
+        </br>
+        <form action="{% url 'addComment' id=product.id %}" method="post">
+            {% csrf_token %}
+            <label class="input-group" >Comments</label>
+            <textarea class="form-control" rows="4" name ="comment" required></textarea>
+            </br>
+            <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+        </br>
+        <ul class="list-group">
+            {% for comment in comments %}
+                <li class="list-group-item">
+                    <div class="d-flex w-100 justify-content-between">
+                        <small>{{comment.time}}</small>
+                    </div>
+                    <p class="mb-1">{{comment.message}}</p>
+                    <small>by <strong>{{comment.author}}</strong></small>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <center><p><b> You Must Sign-in to view this Page </b></p></center>
+    {% endif %}
+
+{% endblock body %}

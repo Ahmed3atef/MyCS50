@@ -1,0 +1,46 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2 style="text-align:center;">Active Listings</h2>
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        <div class="input-group">
+            <select class="custom-select" name="category">
+                <option selected>Choose...</option>
+                {% for category in categoryies %}
+                    <option>{{category}}</option>
+                {% endfor %}
+            </select>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Filter</button>
+            </div>
+        </div>
+    </form>
+
+    {% if message %}
+        <h1 style="text-align: center; padding:50px"> {{message}} </h1>
+    {% else %}
+        {% for item in items %}
+            {% if item.is_Active %}
+                <div class="container bcontent " style="padding:10px">
+                    <div class="card" >
+                        <div class="row no-gutters">
+                            <div class="col-sm-5 ">
+                                <img class="card-img" src="{{item.image_url}}" alt="{{item.title}}" >
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{item.title}}</h3>
+                                    <h4 class="card-text text-muted">${{item.bid}}</h4>
+                                    <p class="card-text">{{item.description}}</p>
+                                    <h6 class="card-text text-muted"><i>Created {{item.create_time}} By user {{item.user}}</i><h6>
+                                    <a href="{% url 'productView' id=item.id%}" class="btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}
