@@ -128,7 +128,7 @@ def productView(request, id):
     product_view = Listing.objects.get(id=id)
     current_id = request.user
     inWatchlist = False if current_id in product_view.watchlist.all() else True
-    comments = Comments.objects.all()
+    comments = Comments.objects.filter(listing_comment = product_view)
     return render(request, "auctions/productView.html",{
         "product":product_view,
         "user":current_id,
