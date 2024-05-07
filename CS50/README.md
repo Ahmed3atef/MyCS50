@@ -12,7 +12,7 @@ Watch an introduction
 
 Even if you are not a student at Harvard, you are welcome to “take” this course for free via this OpenCourseWare by working your way through the course’s eleven [weeks](https://cs50.harvard.edu/x/2024/weeks/) of material. For each week, follow this workflow:
 
-```How to Take this Course
+```mermaid
   graph TD;
     Watch Lecture-->Watch Section;
     Note: recommended
