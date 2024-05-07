@@ -12,17 +12,17 @@ Watch an introduction
 
 Even if you are not a student at Harvard, you are welcome to “take” this course for free via this OpenCourseWare by working your way through the course’s eleven [weeks](https://cs50.harvard.edu/x/2024/weeks/) of material. For each week, follow this workflow:
 
-recommended
+```How to Take this Course
+  graph TD;
+    Watch Lecture-->Watch Section;
+    Note: recommended
+    Watch Lecture-->Submit Problem Set;
+    Watch Section-->Watch Shorts;
+    Note: recommended
+    Watch Section-->Submit Problem Set;
+    Watch Shorts-->Submit Problem Set;
+```
 
-recommended
-
-Watch Lecture
-
-Watch Section
-
-Submit Problem Set
-
-Watch Shorts
 
 And then submit the course’s [final project](https://cs50.harvard.edu/x/2024/project/).
 
