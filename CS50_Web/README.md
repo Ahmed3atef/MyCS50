@@ -1,4 +1,4 @@
-![CS50Web] (https://pll.harvard.edu/sites/default/files/styles/16_9_medium/public/course/CS50W_pll.png?itok=pvEE-46J)
+![CS50Web] (https://pll.harvard.edu/sites/default/files/styles/16_9_medium/public/course/CS50W_pll.png)
 
 [Welcome](https://cs50.harvard.edu/web/2020/#welcome)
 =====================================================
