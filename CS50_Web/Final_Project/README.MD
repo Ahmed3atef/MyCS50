@@ -15,9 +15,7 @@ This project is a Django-based web application for managing blog posts. Users ca
 This project satisfies the distinctiveness requirement by implementing custom features and functionalities beyond basic CRUD operations. Some distinctive features include:
 
 - User authentication: Users can register, log in, and log out securely.
-- Profile management: Users can view and update their profiles, including their usernames and passwords.
 - Image upload: Users can upload images to accompany their blog posts.
-- Favorite posts: Users can mark posts as favorites and view their favorite posts in a dedicated section.
 
 ### Complexity
 
@@ -27,6 +25,11 @@ The project demonstrates complexity through several aspects:
 - Class-based views: Views are implemented using Django's class-based views for better code organization and reusability.
 - Frontend design: The project includes custom styling using CSS to improve the user interface and user experience.
 - JavaScript integration: JavaScript is used to enhance interactivity, such as making images responsive and handling favorite post actions asynchronously.
+- Anonymous browsing: Users can surf posts anonymously without logging in.
+- Authentication required for actions: Users must register to add, delete, or edit their own posts.
+- Image attachment: Users can add images to their posts.
+- Authentication operations: The application supports login, logout, and sign-up operations.
+
 
 ## Files and Components
 
