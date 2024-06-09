@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h2>Log In</h2>
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Log In</button>
+<p>or: <a href="{% url "signup" %}" class="nav-link">SignUp</a></p>
+</form>
+{% endblock content %}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/p_styles.css" %}">
+</head>
+<body>
+    <header id="navbar">
+        <nav>
+            <ul>
+                <li><a href="{% url "home" %}" >Welcome</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                {% if user.is_authenticated and user.username == 'valentino' %}
+                    <li><a href="{% url "add_project" %}">Add Project</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+    
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me via <a id="profile-link" href="https://github.com/Ahmed3atef" target="_blank">GitHub</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+</body>
+</html>

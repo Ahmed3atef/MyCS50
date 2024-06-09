@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ post.title }}</h1>
+{% if post.image %}
+    <div class="image-container">
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-image">
+    </div>
+{% endif %}
+<p>{{ post.body }}</p>
+<div class="detail-links">
+    {% if user.is_authenticated and user == post.author %}
+        <a class="detail-link detail-update-post" href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a>
+        <a class="detail-link detail-delete-post" href="{% url "post_delete" post.pk %}">Delete</a>
+    {% endif %}
+    <a class="detail-link detail-back-home" href="{% url 'index' %}">Back to Home</a>
+</div>
+
+{% endblock %}
