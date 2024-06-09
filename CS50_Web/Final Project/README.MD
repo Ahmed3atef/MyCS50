@@ -58,6 +58,5 @@ To run the application locally, follow these steps:
 ---
 
 ### requirements.txt
-- Django~=3.2.10
-- mysqlclient
+- Django
 - Pillow
