@@ -52,8 +52,8 @@ To run the application locally, follow these steps:
 
 ## Additional Information
 
-- This project was developed as part of a Django web development course.
-- For any issues or suggestions, please contact [project@example.com](mailto:project@example.com).
+- This project was developed as part of a CS50web.
+- you can see it here [My Blog](https://atef39.pythonanywhere.com).
 
 ---
 
