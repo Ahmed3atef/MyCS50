@@ -162,8 +162,7 @@ First, in our KB, we know that P is true. Thus, we can say that the KB is false 
 
 Next, similarly, in our KB, we know that Q is false. Thus, we can say that the KB is false in all models where Q is true.
 
-|P|Q|R|
-KB|
+|P|Q|R|KB|
 | --- | --- | --- | --- |
 | false | false | false | false |
 | false | false | true | false |
