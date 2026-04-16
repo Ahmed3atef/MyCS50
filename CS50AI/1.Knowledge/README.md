@@ -190,7 +190,7 @@ Looking at this table, there is only one model where our knowledge base is true.
 
 Next, let's look at how knowledge and logic can be represented as code.
 
-```
+```python
 from logic import *
 
 # Create new classes, each having a name, or a symbol, representing each proposition.
@@ -221,7 +221,7 @@ To run the Model Checking algorithm, the following information is needed:
 
 The model checking algorithm looks as follows:
 
-```
+```python
 def check_all(knowledge, query, symbols, model):
 
     # If model has an assignment for each symbol
@@ -304,7 +304,7 @@ And now, using multiple previous pieces of data, we can deduce that Scarlet comm
 
 Here is how the information would be added to the knowledge base in Python:
 
-```
+```python
 # Add the clues to the KB
 knowledge = And(
 
